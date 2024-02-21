@@ -1,6 +1,8 @@
-// In src/services/workoutService.js
-const getAllProducts = () => {
-  return;
+import Product from "../database/models/Product";
+
+const getAllProducts: Function = async () => {
+  const products = await Product.find();
+  return products;
 };
 
 const getOneProduct = () => {

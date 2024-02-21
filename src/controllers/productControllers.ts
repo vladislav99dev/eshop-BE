@@ -1,9 +1,9 @@
 import { Request, Response } from "express";
 import productServices from "../services/productServices";
 
-const getAllProducts = (req: Request, res: Response) => {
-  const allProducts = productServices.getAllProducts();
-  res.send("Get all Products");
+const getAllProducts = async (req: Request, res: Response) => {
+  const allProducts = await productServices.getAllProducts();
+  res.json(allProducts);
 };
 
 const getOneProduct = (req: Request, res: Response) => {
