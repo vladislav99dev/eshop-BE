@@ -1,30 +1,30 @@
 import Product from "../database/models/Product";
 
-const getAllProducts: Function = async () => {
+const getAll: Function = async () => {
   const products = await Product.find();
   return products;
 };
 
-const getOneProduct = () => {
+const getOne = () => {
   return;
 };
 
-const createNewProduct = () => {
+const createNew = () => {
   return;
 };
 
-const updateOneProduct = () => {
+const updateOne = () => {
   return;
 };
 
-const deleteOneProduct = () => {
+const deleteOne = () => {
   return;
 };
 
 export default {
-  getAllProducts,
-  getOneProduct,
-  createNewProduct,
-  updateOneProduct,
-  deleteOneProduct,
+  getAll,
+  getOne,
+  createNew,
+  updateOne,
+  deleteOne,
 };

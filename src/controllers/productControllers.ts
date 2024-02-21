@@ -1,35 +1,35 @@
 import { Request, Response } from "express";
 import productServices from "../services/productServices";
 
-const getAllProducts = async (req: Request, res: Response) => {
-  const allProducts = await productServices.getAllProducts();
+const getAll = async (req: Request, res: Response) => {
+  const allProducts = await productServices.getAll();
   res.json(allProducts);
 };
 
-const getOneProduct = (req: Request, res: Response) => {
-  const product = productServices.getOneProduct();
+const getOne = (req: Request, res: Response) => {
+  const product = productServices.getOne();
   res.send("Get an existing Product");
 };
 
-const createNewProduct = (req: Request, res: Response) => {
-  const createdProduct = productServices.createNewProduct();
+const createNew = (req: Request, res: Response) => {
+  const createdProduct = productServices.createNew();
   res.send("Create a new Product");
 };
 
-const updateOneProduct = (req: Request, res: Response) => {
-  const updateProduct = productServices.updateOneProduct();
+const updateOne = (req: Request, res: Response) => {
+  const updateProduct = productServices.updateOne();
   res.send("Update an existing Product");
 };
 
-const deleteOneProduct = (req: Request, res: Response) => {
-  const deletedProduct = productServices.deleteOneProduct();
+const deleteOne = (req: Request, res: Response) => {
+  const deletedProduct = productServices.deleteOne();
   res.send("Delete an existing Product");
 };
 
 export default {
-  getAllProducts,
-  getOneProduct,
-  createNewProduct,
-  updateOneProduct,
-  deleteOneProduct,
+  getAll,
+  getOne,
+  createNew,
+  updateOne,
+  deleteOne,
 };
